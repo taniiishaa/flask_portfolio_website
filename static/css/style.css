@@ -1,0 +1,442 @@
+/* ====================================
+   General & Reset
+   ==================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #333;
+    transition: background 0.4s, color 0.4s;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* ====================================
+   Dark Mode Styles
+   ==================================== */
+body.dark-mode {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .project-card, body.dark-mode .experience-card {
+    background: #2c2c2c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .bg-light {
+    background: #252525 !important;
+}
+
+body.dark-mode input, body.dark-mode textarea {
+    background: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
+/* ====================================
+   Navigation Bar
+   ==================================== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.4s, box-shadow 0.4s;
+}
+
+body.dark-mode .navbar {
+    background: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.nav-links a {
+    margin-left: 25px;
+    font-weight: 500;
+    color: #333;
+}
+
+body.dark-mode .nav-links a {
+    color: #e0e0e0;
+}
+
+.nav-links a:hover {
+    color: #e74c3c;
+}
+
+/* ====================================
+   Header / Home Section
+   ==================================== */
+header {
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    color: white;
+    text-align: center;
+    padding: 80px 20px 60px;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.professional-title {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 6px solid white;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.social-icons a {
+    margin: 0 15px;
+    color: white;
+    font-size: 28px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f1c40f;
+    transform: scale(1.2);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 25px;
+    background: #e74c3c;
+    color: white;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+
+/* ====================================
+   Sections & General Layout
+   ==================================== */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.bg-light {
+    background: #f7f7f7;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #3498db;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.summary-text {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
+    font-size: 1.1em;
+}
+
+
+/* ====================================
+   Skills Section
+   ==================================== */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    text-align: left;
+}
+
+.skill-group {
+    flex: 1 1 45%;
+    min-width: 300px;
+    padding: 20px;
+    border-left: 5px solid #3498db;
+}
+
+.skill-group h3 {
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.tags {
+    margin-top: 15px;
+}
+
+.tags span {
+    display: inline-block;
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 6px 12px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+body.dark-mode .tags span {
+    background: #3a3a3a;
+    color: #e0e0e0;
+}
+
+
+/* ====================================
+   Projects Section
+   ==================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+body.dark-mode .project-card h3 {
+     color: #3498db;
+}
+
+.project-card p {
+    flex-grow: 1; /* Makes the description take available space */
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.project-tags span {
+    font-size: 0.8em;
+    background: #e7eaf0;
+    color: #555;
+}
+
+body.dark-mode .project-tags span {
+    background: #444;
+    color: #ccc;
+}
+
+.project-card a {
+    color: #e74c3c;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Custom style for the list of other projects */
+.other-projects-card ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+.other-projects-card ul li {
+    margin-bottom: 5px;
+}
+
+/* ====================================
+   Experience Section
+   ==================================== */
+.experience-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: left;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #f1c40f;
+    transition: transform 0.3s;
+}
+
+.experience-card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.experience-card h4 {
+    color: #7f8c8d;
+    font-size: 1em;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.experience-card p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.float-right {
+    float: right;
+    font-size: 0.9em;
+    color: #3498db;
+}
+
+/* ====================================
+   Contact Section
+   ==================================== */
+#contact {
+    text-align: center;
+}
+
+.contact-subtext {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #7f8c8d;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+button {
+    padding: 15px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+.flash-messages {
+    list-style: none;
+    padding: 10px;
+    color: green;
+    background: #e6ffe6;
+    border: 1px solid green;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+body.dark-mode .flash-messages {
+    background: #1f3d1f;
+    color: #a3e6a3;
+    border-color: #387638;
+}
+
+.contact-info {
+    margin-top: 30px;
+    font-size: 1.1em;
+}
+.contact-info p {
+    margin: 5px 0;
+}
+.contact-info i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+/* ====================================
+   Theme Toggle & Footer
+   ==================================== */
+.theme-toggle {
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1001;
+    color: #333;
+    transition: color 0.3s;
+}
+body.dark-mode .theme-toggle {
+    color: #f1c40f;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #2c3e50;
+    color: white;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #3498db;
+}
