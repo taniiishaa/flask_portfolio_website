@@ -1,0 +1,206 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanisha Chaudhary | Aspiring Software Engineer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#home" class="nav-logo">Tanisha</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <i id="theme-icon" class="fas fa-moon"></i>
+        </div>
+    </nav>
+
+    <header id="home">
+        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Tanisha's Profile Picture" class="profile-pic">
+        <h1>Hello, I'm Tanisha Chaudhary!</h1>
+        <p class="professional-title">Computer Science Student | Aspiring Software Engineer</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/tanisha-chaudhary-121621292" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/taniiishaa" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:tanishac216@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+        <a href="#projects" class="cta-button">View My Work</a>
+    </header>
+
+    <section id="about">
+        <h2>Professional Summary</h2>
+        <p class="summary-text">Innovative and goal-driven Computer Science Engineering student with hands-on experience in
+            developing impactful projects and leading teams at national-level hackathons. Proficient in Python
+            development and AWS cloud computing, with a strong focus on problem-solving, leadership, and
+            adaptability to deliver effective solutions. Eager to contribute as a software developer by driving
+            meaningful and scalable outcomes.
+        </p>
+    </section>
+
+    <section id="skills" class="bg-light">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-group">
+                <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                <div class="tags">
+                    <span>Python</span><span>C</span><span>C++</span><span>DSA with C++</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3><i class="fas fa-laptop-code"></i> Web & Database</h3>
+                <div class="tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Flask</span><span>MySQL</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3><i class="fas fa-toolbox"></i> Tools & Tech</h3>
+                <div class="tags">
+                    <span>Git</span><span>GitHub</span><span>VS Code</span><span>AWS</span><span>Cloud Computing</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3><i class="fas fa-users"></i> Leadership & Management</h3>
+                <div class="tags">
+                    <span>Team Leadership</span><span>Team Management</span><span>Communication Skills</span><span>Teamwork</span><span>Time Management</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Impactful Projects</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <h3>Telegram Bot</h3>
+                <p>Developed an interactive Telegram bot using Python and the Telegram Bot API to automate tasks and provide user-friendly interactions.</p>
+                <div class="project-tags tags">
+                    <span>Python</span><span>Automation</span><span>API Integration</span>
+                </div>
+                <a href="https://github.com/taniiishaa" target="_blank">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <div class="project-card">
+                <h3>Real-Time QR Code Detection</h3>
+                <p>Built a real-time QR code detection and decoding system using **OpenCV** and **Pyzbar** in Python for instant data retrieval.</p>
+                <div class="project-tags tags">
+                    <span>Python</span><span>OpenCV</span><span>Pyzbar</span><span>Real-Time Processing</span>
+                </div>
+                <a href="https://github.com/taniiishaa" target="_blank">View Details <i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <div class="project-card">
+                <h3>YOLOv8 Object Detection & TTS</h3>
+                <p>Real-time object detection using **YOLOv8** integrated with Text-to-Speech (pyttsx3) for accessibility and surveillance use cases.</p>
+                <div class="project-tags tags">
+                    <span>YOLOv8</span><span>Deep Learning</span><span>OpenCV</span><span>pyttsx3</span>
+                </div>
+                <a href="https://github.com/taniiishaa" target="_blank">View Details <i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+             <div class="project-card">
+                <h3>Real-Time Object Detection (MobileNet)</h3>
+                <p>Developed an efficient object detection system using the lightweight **MobileNet SSD** model for real-time video stream analysis.</p>
+                <div class="project-tags tags">
+                    <span>Deep Learning</span><span>MobileNet SSD</span><span>Computer Vision</span>
+                </div>
+                <a href="https://github.com/taniiishaa" target="_blank">View Details <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            
+             <div class="project-card">
+                <h3>Real-Time IoT Dashboard – Dash</h3>
+                <p>Built a real-time dashboard using **MQTT, JSON, and Dash** to monitor and visualize live sensor data from IoT devices.</p>
+                <div class="project-tags tags">
+                    <span>IoT</span><span>MQTT</span><span>Dash</span><span>Real-Time Visualization</span>
+                </div>
+                <a href="https://github.com/taniiishaa" target="_blank">View Details <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            
+            <div class="project-card other-projects-card">
+                <h3>Other Notable Projects</h3>
+                <p>Managed and developed the logic for several core systems:</p>
+                <ul>
+                    <li>BANK MANAGEMENT SYSTEM</li>
+                    <li>LIBRARY MANAGEMNT SYSTEM</li>
+                    <li>NextCloud deployment with AWS</li>
+                </ul>
+                <a href="https://github.com/taniiishaa" target="_blank">Full Project List <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            
+        </div>
+    </section>
+    
+    <section id="experience" class="bg-light">
+        <h2>Internships & Industrial Training</h2>
+        
+        <div class="experience-card">
+            <h3>Industrial Trainee <span class="float-right">Jun 2024 - Aug 2024 (1 Month)</span></h3>
+            <h4>@ OOPS Institute of Computer Technology, Kurukshetra</h4>
+            <p>Gained practical exposure to **Python programming, AI, DBMS, and MySQL**. Enhanced ability to apply theoretical concepts and strengthened problem-solving skills for efficient software solutions.</p>
+            <div class="tags">
+                 <span>Python</span><span>MySQL</span><span>AI</span><span>Python Frameworks</span>
+            </div>
+        </div>
+        
+        <div class="experience-card">
+            <h3>Industrial Trainee <span class="float-right">Jul 2025 - Aug 2025 (1 Month)</span></h3>
+            <h4>@ The Core Systems, Chandigarh</h4>
+            <p>Completed in-depth technical training focusing on industry-relevant domains. Acquired skills in **AI, Machine Learning, Data Science, AWS, and Cloud Computing**, bridging academic knowledge with industrial practice.</p>
+            <div class="tags">
+                <span>Python</span><span>AI</span><span>Machine Learning</span><span>AWS</span><span>Cloud Computing</span>
+            </div>
+        </div>
+        
+        <div class="experience-card">
+            <h3>Intern (Python Developer) <span class="float-right">Aug 2025 - Sept 2025 (Current)</span></h3>
+            <h4>@ codeXintern (Unpaid)</h4>
+            <p>Gaining hands-on experience in **backend development**, writing efficient Python code, and contributing to application logic. Strengthening technical expertise and adaptability in real-world development workflows.</p>
+            <div class="tags">
+                <span>Python</span><span>Backend Development</span><span>Problem Solving</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <p class="contact-subtext">I'm currently seeking Software Developer roles. Feel free to connect or send a message!</p>
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flash-messages">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        
+        <form method="POST" action="/">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        
+        <div class="contact-info">
+             <p><i class="fas fa-envelope"></i> Email: <a href="mailto:tanishac216@gmail.com">tanishac216@gmail.com</a></p>
+             <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/tanisha-chaudhary-121621292" target="_blank">Tanisha Chaudhary</a></p>
+             <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/taniiishaa" target="_blank">taniiishaa</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Tanisha Chaudhary | Built with Flask & Passion. <a href="https://github.com/taniiishaa" target="_blank">View Source Code</a></p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
